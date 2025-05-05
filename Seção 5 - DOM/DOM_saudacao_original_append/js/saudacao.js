@@ -1,10 +1,13 @@
 ;(function () {
-  const nomeUsuario = null
-  const elemento = document.querySelector('.top-bar p')
+  const nomeUsuario = 'Rodrigo'
+
   if (nomeUsuario) {
-    elemento.innerHTML += '<b>' + nomeUsuario + '</b>'
-  } else {
-    // elemento.parentElement.style.display = 'none' // volta para o elemento (pai) e esconde o elemento inteiro
-    elemento.remove()
+    const topBarElemento = document.createElement('div')
+    topBarElemento.className = 'top-bar'
+    topBarElemento.innerHTML = `<p>Ola, <b> ${nomeUsuario} </b> </p>`
+
+    const elementoPai = document.querySelector('.hero')
+
+    elementoPai.insertBefore(topBarElemento, elementoPai.firstElementChild)
   }
 })()
