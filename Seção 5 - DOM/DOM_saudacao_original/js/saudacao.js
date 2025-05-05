@@ -1,9 +1,9 @@
 ;(function () {
-  const nomeUsuario = 'Rodrigo'
-
-  //   document.querySelector('.top-bar p').textContent =
-  //     'Bem-vindo(a)' + nomeUsuario
+  const nomeUsuario = null
   const elemento = document.querySelector('.top-bar p')
-  //   elemento.textContent = elemento.textContent + nomeUsuario
-  elemento.textContent += nomeUsuario
+  if (nomeUsuario) {
+    elemento.innerHTML += '<b>' + nomeUsuario + '</b>'
+  } else {
+    elemento.parentElement.style.display = 'none' // volta para o elemento (pai) e esconde o elemento inteiro
+  }
 })()
