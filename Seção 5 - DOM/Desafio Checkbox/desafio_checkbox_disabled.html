@@ -31,10 +31,14 @@ Este contrato nos dá direito à ...</textarea
 
       function enableOrDisableButton() {
         const contrato = document.getElementById('contrato')
-        let checkedValue = contrato.checked
-        console.log(checkedValue)
+        let checked = contrato.checked
 
-        btn.disabled = !checkedValue
+        // if (checked) {
+        //   btn.disabled = false
+        // } else {
+        //   btn.disabled = true
+        // }
+        btn.disabled = !checked
       }
     </script>
   </body>
