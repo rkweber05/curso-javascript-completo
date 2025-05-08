@@ -25,3 +25,16 @@ let nomesPorOrdem = nomes.reduce(function (nomes, nomeAtual) {
 }, {})
 
 console.log(nomesPorOrdem)
+console.log('-----------------------')
+
+const numeros = [1, 3, 4, 1, 4, 5, 3, 5, 8, 9]
+// const numerosUnicos = [1,3,4,5,8,9] -> resolução
+let numerosUnicos = numeros.reduce(function (numeros, numeroAtual) {
+  if (!numeros.includes(numeroAtual)) {
+    numeros.push(numeroAtual)
+  }
+
+  return numeros
+}, [])
+
+console.log(numerosUnicos)
